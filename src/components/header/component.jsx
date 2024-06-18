@@ -120,7 +120,7 @@ const Header = () => {
           <ul>
             <li
               onClick={() => {
-                navigate("/introduction");
+                navigate("/site/introduction");
               }}
             >
               <p>연구실 소개</p>
@@ -128,7 +128,7 @@ const Header = () => {
             </li>
             <li
               onClick={() => {
-                navigate("/member");
+                navigate("/site/member");
               }}
             >
               <p>구성원</p>
@@ -136,7 +136,7 @@ const Header = () => {
             </li>
             <li
               onClick={() => {
-                navigate("/project");
+                navigate("/site/project");
               }}
             >
               <p>프로젝트</p>
@@ -144,7 +144,7 @@ const Header = () => {
             </li>
             <li
               onClick={() => {
-                navigate("/news");
+                navigate("/site/news");
               }}
             >
               <p>소식</p>

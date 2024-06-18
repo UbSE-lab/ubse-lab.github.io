@@ -24,7 +24,7 @@ const createUndergraduate = async (data) => {
         headers: {
           "Content-Type": "multipart/form-data",
         },
-        withCredentials: true,
+        // withCredentials: true,
       }
     );
     console.log("학부생 등록값:", response.data);
@@ -49,10 +49,11 @@ const createGraduate = async (data) => {
       import.meta.env.VITE_GRADUATE_URL,
       formData,
       {
+        baseURL: import.meta.env.VITE_API_ORIGIN,
         headers: {
           "Content-Type": "application/json",
         },
-        withCredentials: true,
+        // withCredentials: true,
       }
     );
     console.log("졸업생 등록값:", response.data);
@@ -73,10 +74,11 @@ const deleteUndergraduate = async (data) => {
         params: {
           id: data.id,
         },
+        baseURL: import.meta.env.VITE_API_ORIGIN,
         headers: {
           "Content-Type": "application/json",
         },
-        withCredentials: true,
+        // withCredentials: true,
       }
     );
     alert("학부생 삭제 성공!");
@@ -94,10 +96,11 @@ const deleteGraduate = async (data) => {
       params: {
         id: data.id,
       },
+      baseURL: import.meta.env.VITE_API_ORIGIN,
       headers: {
         "Content-Type": "application/json",
       },
-      withCredentials: true,
+      // withCredentials: true,
     });
     alert("졸업생 삭제 성공!");
     return response.data;
@@ -114,10 +117,11 @@ const updateProfessor = async (data) => {
       import.meta.env.VITE_PROFESSOR_URL,
       data,
       {
+        baseURL: import.meta.env.VITE_API_ORIGIN,
         headers: {
           "Content-Type": "application/json",
         },
-        withCredentials: true,
+        // withCredentials: true,
       }
     );
     console.log("교수 수정값:", response.data);
@@ -136,10 +140,11 @@ const updateUndergraduate = async (data) => {
       import.meta.env.VITE_UNDERGRADUATE_URL,
       data,
       {
+        baseURL: import.meta.env.VITE_API_ORIGIN,
         headers: {
           "Content-Type": "application/json",
         },
-        withCredentials: true,
+        // withCredentials: true,
       }
     );
     console.log("학부생 수정값:", response.data);
@@ -158,10 +163,11 @@ const updateGraduate = async (data) => {
       import.meta.env.VITE_GRADUATE_URL,
       data,
       {
+        baseURL: import.meta.env.VITE_API_ORIGIN,
         headers: {
           "Content-Type": "application/json",
         },
-        withCredentials: true,
+        // withCredentials: true,
       }
     );
     console.log("졸업생 수정값:", response.data);

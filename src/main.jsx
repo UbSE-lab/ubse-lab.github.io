@@ -22,9 +22,11 @@ import ManageNewsPage from "./pages/manageNews/page";
 // 스타일
 import "./index.css";
 import "./custom.css";
+import { useEffect } from "react";
 
 const isAuthenticated = () => {
-  return localStorage.getItem("authenticated") === "true";
+  // return localStorage.getItem("authenticated") === "true";
+  return sessionStorage.getItem("authenticated") === "true";
 };
 
 const PrivateRoute = ({ children }) => {
@@ -43,19 +45,19 @@ const router = createBrowserRouter([
         element: <MainPage />,
       },
       {
-        path: "/introduction",
+        path: "/site/introduction",
         element: <IntroductionPage />,
       },
       {
-        path: "/member",
+        path: "/site/member",
         element: <MemberPage />,
       },
       {
-        path: "/project",
+        path: "/site/project",
         element: <ProjectPage />,
       },
       {
-        path: "/news",
+        path: "/site/news",
         element: <NewsPage />,
       },
     ],
@@ -84,6 +86,9 @@ const router = createBrowserRouter([
   {
     path: "/site/auth",
     element: <AuthPage />,
+  },
+  {
+    basename: "https://ubse-lab.github.io/site",
   },
 ]);
 

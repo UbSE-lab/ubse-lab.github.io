@@ -8,13 +8,18 @@ import Footer from "@/components/footer/component";
 import "./style.css";
 
 const RootLayout = () => {
-    return (
-        <div id="rootLayout">
-            <Header />
-            <Outlet />
-            <Footer />
-        </div>
-    );
+  // 인증 초기화
+  useEffect(() => {
+    // localStorage.removeItem("authenticated");
+    sessionStorage.removeItem("authenticated");
+  }, []);
+  return (
+    <div id="rootLayout">
+      <Header />
+      <Outlet />
+      <Footer />
+    </div>
+  );
 };
 
 export default RootLayout;

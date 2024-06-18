@@ -22,6 +22,8 @@ const AuthPage = () => {
     const authKey = authRef.current.value;
     if (authKey == "20191585") {
       console.log("인증성공");
+      // localStorage.setItem("authenticated", "true");
+      sessionStorage.setItem("authenticated", "true");
       navigate("/site/manage/member");
     } else {
       alert("비밀번호가 틀렸습니다.");

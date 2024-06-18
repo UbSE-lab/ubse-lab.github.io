@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://ubse-lab.github.io/site",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
